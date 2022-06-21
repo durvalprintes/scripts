@@ -1,10 +1,11 @@
-import { readFileSync, writeFileSync } from "fs";
+import { readFileSync } from "fs";
+import { encode, decode } from "../src/modules/convert.js";
 
 try {
-  const entrada = readFileSync("entrada.txt", "utf8");
-  let saida = entrada + " World!\n";
-  saida += "Random number: ".concat(Math.floor(Math.random() * 101));
-  writeFileSync("saida.txt", saida, "utf8");
+  let text = readFileSync("src/data/entrada.txt", "utf8");
+  text += "\nNumber: ".concat(Math.floor(Math.random() * 101));
+  console.log(text);
+  decode(encode(text));
 } catch (erro) {
   console.log(erro);
 }
