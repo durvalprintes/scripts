@@ -1,4 +1,12 @@
 {
+  "name": "scripts",
+  "version": "0.0.1",
+  "description": "resolucao de exercicios com javascript",
+  "author": {
+    "name": "Durval Printes",
+    "email": "durvalprintes@gmail.com"
+  },
+  "main": "src/app.js",
   "type": "module",
   "scripts": {
     "start": "node src/app.js"
