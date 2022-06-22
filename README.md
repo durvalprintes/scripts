@@ -23,16 +23,15 @@ Segue abaixo, lista com a documentação da intalação das ferramentas.
 | Git | https://git-scm.com/book/en/v2/Getting-Started-Installing-Git |
 | Docker | https://docs.docker.com/desktop/ |
 | NodeJS | https://nodejs.org/en/download/ |
+
 ### Instalação
 
 Clonar o repositório, via SSH ou HTTPS:
-
 ```
 git clone git@github.com:durvalprintes/scripts.git
 ```
 
 Caso tenha optado por utilizar <strong>Docker</strong>, faça o _build_ da imagem, a partir do _Dockerfile_ do projeto:
-
 ```
 docker build -t scripts:latest .
 ```
@@ -53,4 +52,3 @@ Você pode visualizar os logs com:
 ```
 docker logs scripts
 ``` 
-
