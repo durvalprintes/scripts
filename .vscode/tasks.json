@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "docker-run: debug",
+      "type": "docker-run",
+      "dockerRun": {
+        "containerName": "debug",
+        "image": "scripts:latest",
+        "volumes": [
+          {
+            "localPath": "${workspaceFolder}/src/data",
+            "containerPath": "/home/node/scripts/src/data"
+          }
+        ]
+      },
+      "node": {
+        "enableDebugging": true,
+        "inspectMode": "break"
+      }
+    }
+  ]
+}
