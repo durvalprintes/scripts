@@ -40,7 +40,6 @@ docker build -t scripts:latest .
 ## Executando <a name = "uso"></a>
 
 Caso tenha instalado o <strong>Node.js</strong>, o _package.json_ contem alguns comandos para execução dos scripts, como:
-
 ```
 npm start
 ```
@@ -48,9 +47,9 @@ npm start
 Para a opção utlizando <strong>Docker</strong>, subir um container a partir da imagem criada, com:
 ```
 docker run -d --name scripts -v $(pwd)/src/data:/home/node/scripts/src/data scripts:latest
+```
 
 Você pode visualizar os logs com:
-
 ```
 docker logs scripts
 ``` 
