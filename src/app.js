@@ -1,6 +1,6 @@
 import { readFileSync } from "fs";
 import { encode, decode } from "../src/modules/convert.js";
-import { password } from "./modules/crypto.cjs";
+import { guess } from "./modules/crypto.cjs";
 
 try {
   let text = readFileSync("src/data/entrada.txt", "utf8");
@@ -8,7 +8,7 @@ try {
   console.log(text);
   decode(encode(text));
   console.log("-----------");
-  console.log(password() ? "GRANTED" : "DENIED");
+  console.log(guess("123456") ? "GRANTED" : "DENIED");
 } catch (erro) {
   console.log(erro);
 }

@@ -3,12 +3,15 @@ const prompt = require("prompt-sync")();
 
 const hash = (data) => crypto.createHash("md5").update(data).digest("base64");
 
-function password() {
-  const secret = "12345678";
-  const pass = prompt("Qual a secret? ", { echo: "*", value: "blank" });
-  return hash(secret) == hash(pass);
+function guess(secret) {
+  let hit = false;
+  const attempts = prompt("How many attempts? ", { value: 1 });
+  for (let attemtp = 0; !hit && attemtp < attempts; attemtp++) {
+    hit = hash(secret) == hash(prompt("Whats the secret? ", { echo: "*" }));
+  }
+  return hit;
 }
 
 module.exports = {
-  password,
+  guess,
 };
