@@ -45,7 +45,7 @@ npm start
 
 Para a opção utlizando <strong>Docker</strong>, subir um container a partir da imagem criada, com:
 ```
-docker run -d --name scripts -v $(pwd)/src/data:/home/node/scripts/src/data scripts:latest
+docker run -it --rm --name scripts -v $(pwd)/src/data:/home/node/scripts/src/data scripts:latest
 ```
 
 Você pode visualizar os logs com:
